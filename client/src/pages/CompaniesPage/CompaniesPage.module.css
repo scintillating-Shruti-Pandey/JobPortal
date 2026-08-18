@@ -1,0 +1,149 @@
+.page { padding-top: 80px; min-height: 100vh; background: var(--cream); padding-bottom: 5rem; }
+
+.pageHeader {
+  background: linear-gradient(160deg, var(--cream) 0%, var(--cream-dark) 100%);
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--cream-darker);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.pageTitle em { font-style: italic; color: var(--terra); }
+
+.pageSubtitle { font-size: 1.125rem; color: var(--ink-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+
+.searchBar {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.searchInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--white);
+  border: 2px solid var(--cream-darker);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+.searchInputWrap:focus-within { border-color: var(--forest); box-shadow: 0 4px 20px rgba(45,80,22,0.1); }
+
+.searchIcon { color: var(--ink-faint); }
+
+.searchInput {
+  flex: 1; border: none; outline: none;
+  font-size: 1rem; color: var(--ink); background: transparent;
+}
+.searchInput::placeholder { color: var(--ink-faint); }
+
+/* Grid */
+.companiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.companyCard {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  transition: all 0.3s var(--ease-smooth);
+  display: flex;
+  flex-direction: column;
+}
+
+.companyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45,80,22,0.15);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.logo {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-darker);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.logo img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+
+.headerInfo { flex: 1; }
+
+.companyName {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.description {
+  font-size: 0.9375rem;
+  color: var(--ink-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+.metaInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--cream-darker);
+}
+
+.metaInfo span {
+  display: flex; align-items: center; gap: 0.35rem;
+  font-size: 0.8125rem; color: var(--ink-faint);
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.openRoles {
+  font-size: 0.875rem;
+  color: var(--forest);
+}
+.openRoles strong { font-family: var(--font-mono); font-size: 1.125rem; }
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--ink-muted);
+}
+.emptyEmoji { font-size: 3rem; display: block; margin-bottom: 1rem; }
+.emptyState h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--ink); margin-bottom: 0.5rem; }
+
+@media (max-width: 640px) {
+  .companiesGrid { grid-template-columns: 1fr; }
+}

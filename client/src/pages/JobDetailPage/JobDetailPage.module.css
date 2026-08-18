@@ -1,0 +1,271 @@
+.page { padding-top: 80px; min-height: 100vh; background: var(--cream); padding-bottom: 5rem; }
+
+.loadingPage { padding: 120px 1.5rem 4rem; max-width: 1200px; margin: 0 auto; }
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+  font-family: var(--font-body);
+}
+.backBtn:hover { color: var(--forest); }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Main */
+.main {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+}
+
+/* Job Header */
+.jobHeader {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--cream-darker);
+}
+
+.companyLogoLg {
+  width: 72px; height: 72px;
+  border-radius: var(--radius-lg);
+  background: var(--cream-dark);
+  border: 1px solid var(--cream-darker);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.companyLogoLg img { width: 100%; height: 100%; object-fit: contain; padding: 8px; }
+.companyLogoLg span { font-family: var(--font-display); font-size: 1.75rem; font-weight: 700; color: var(--forest); }
+
+.jobMeta { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.875rem; }
+
+.jobTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.875rem;
+  line-height: 1.2;
+}
+
+.jobSubMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+.jobSubMeta span { display: flex; align-items: center; gap: 0.35rem; }
+
+/* Sections */
+.section { margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--cream-darker); }
+.section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+
+.skillsWrap { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.description {
+  font-size: 0.9875rem;
+  color: var(--ink-muted);
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.bulletList { display: flex; flex-direction: column; gap: 0.625rem; }
+.bulletList li { display: flex; align-items: flex-start; gap: 0.625rem; font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.6; }
+
+.check { color: var(--forest); flex-shrink: 0; margin-top: 0.2rem; }
+
+.perksGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.625rem;
+}
+
+.perkItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 0.875rem;
+  background: var(--forest-mist);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  color: var(--forest);
+  font-weight: 500;
+}
+
+.perkIcon { flex-shrink: 0; }
+
+/* Sidebar */
+.sidebar { position: sticky; top: 100px; display: flex; flex-direction: column; gap: 1rem; }
+
+/* Apply Card */
+.applyCard {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+}
+
+.salaryDisplay {
+  text-align: center;
+  padding: 1.25rem;
+  background: var(--forest-mist);
+  border-radius: var(--radius-lg);
+  margin-bottom: 1.25rem;
+}
+.salaryLabel { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--forest); font-weight: 600; margin-bottom: 0.375rem; }
+.salaryValue { font-family: var(--font-mono); font-size: 1.25rem; font-weight: 600; color: var(--forest); }
+
+.applyBtn { width: 100%; justify-content: center; margin-bottom: 0.625rem; }
+.saveBtn { width: 100%; justify-content: center; margin-bottom: 1rem; }
+
+.applyMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--cream-darker);
+}
+.applyMeta span { display: flex; align-items: center; gap: 0.375rem; font-size: 0.8125rem; color: var(--ink-faint); }
+
+.employerNote { text-align: center; padding: 1rem 0; }
+.employerNote p { font-size: 0.875rem; color: var(--ink-muted); margin-bottom: 1rem; }
+
+/* Company Card */
+.companyCard {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+}
+
+.companyCardTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+
+.companyCardLogo {
+  width: 56px; height: 56px;
+  border-radius: var(--radius-md);
+  background: var(--cream-dark);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0.875rem;
+  border: 1px solid var(--cream-darker);
+}
+.companyCardLogo img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+.companyCardLogo span { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--forest); }
+
+.companyCardName { font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 0.25rem; font-family: var(--font-display); }
+.companyCardIndustry { font-size: 0.8125rem; color: var(--terra); font-weight: 500; margin-bottom: 0.75rem; }
+.companyCardDesc { font-size: 0.875rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: 1rem; }
+.companyLink { width: 100%; justify-content: center; }
+
+/* Modal */
+.modalOverlay {
+  position: fixed; inset: 0;
+  background: rgba(26, 26, 46, 0.6);
+  display: flex; align-items: center; justify-content: center;
+  z-index: var(--z-modal);
+  padding: 1rem;
+  backdrop-filter: blur(4px);
+}
+
+.modal {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+}
+
+.modalHeader {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.75rem 1.75rem 1rem;
+  border-bottom: 1px solid var(--cream-darker);
+}
+
+.modalHeader h2 { font-family: var(--font-display); font-size: 1.25rem; color: var(--ink); }
+.modalHeader h2 em { font-style: italic; color: var(--terra); }
+
+.modalClose {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px;
+  border-radius: var(--radius-md);
+  color: var(--ink-muted);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.modalClose:hover { background: var(--cream-dark); }
+
+.modalCompany {
+  display: flex; align-items: center; gap: 0.875rem;
+  padding: 1rem 1.75rem;
+  border-bottom: 1px solid var(--cream-darker);
+}
+
+.modalLogo {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-md);
+  background: var(--cream-dark);
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden;
+}
+.modalLogo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+.modalLogo span { font-family: var(--font-display); font-weight: 700; color: var(--forest); }
+
+.modalCompanyName { font-weight: 600; font-size: 0.9375rem; color: var(--ink); }
+.modalLocation { display: flex; align-items: center; gap: 0.25rem; font-size: 0.8125rem; color: var(--ink-faint); margin-top: 0.2rem; }
+
+.modalForm { padding: 1.5rem 1.75rem; }
+
+.coverLetterArea { resize: vertical; min-height: 140px; }
+
+.modalFooter {
+  display: flex; justify-content: flex-end; gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; }
+  .jobHeader { flex-direction: column; gap: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .main { padding: 1.5rem; }
+  .perksGrid { grid-template-columns: 1fr; }
+}

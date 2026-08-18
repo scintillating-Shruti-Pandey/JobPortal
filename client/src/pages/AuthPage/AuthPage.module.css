@@ -1,0 +1,273 @@
+.page {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--cream);
+	padding: 2rem;
+}
+
+.authContainer {
+	display: flex;
+	width: 100%;
+	max-width: 1100px;
+	background: var(--white);
+	border-radius: var(--radius-xl);
+	overflow: hidden;
+	box-shadow: var(--shadow-xl);
+	min-height: 650px;
+}
+
+/* Left Side - Visual */
+.visualSide {
+	flex: 1;
+	background: var(--forest);
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	padding: 3rem;
+	color: white;
+}
+
+.blob1 {
+	position: absolute;
+	top: -20%;
+	left: -20%;
+	width: 400px;
+	height: 400px;
+	background: rgba(143, 184, 106, 0.3);
+	border-radius: 50%;
+	filter: blur(80px);
+}
+
+.blob2 {
+	position: absolute;
+	bottom: -20%;
+	right: -20%;
+	width: 300px;
+	height: 300px;
+	background: rgba(200, 115, 75, 0.3);
+	border-radius: 50%;
+	filter: blur(60px);
+}
+
+.visualContent {
+	position: relative;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	gap: 0.75rem;
+	text-decoration: none;
+	margin-bottom: auto;
+}
+
+.logoIcon {
+	width: 40px;
+	height: 40px;
+	background: var(--white);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--forest);
+}
+
+.logoText {
+	font-family: var(--font-display);
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: white;
+}
+
+.logoAccent {
+	color: var(--forest-pale);
+}
+
+.visualTextWrap {
+	margin-top: auto;
+	padding-top: 4rem;
+}
+
+.visualTitle {
+	font-family: var(--font-display);
+	font-size: 2.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 1rem;
+}
+
+.visualSubtitle {
+	font-size: 1.0625rem;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 1.6;
+	max-width: 400px;
+}
+
+/* Right Side - Form */
+.formSide {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 3rem 4rem;
+	background: var(--white);
+}
+
+.formWrapper {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.formHeader {
+	margin-bottom: 2rem;
+}
+
+.formTitle {
+	font-family: var(--font-display);
+	font-size: 2rem;
+	font-weight: 700;
+	color: var(--ink);
+	margin-bottom: 0.5rem;
+}
+
+.formSubtitle {
+	font-size: 0.9375rem;
+	color: var(--ink-muted);
+}
+
+.toggleLink {
+	background: none;
+	border: none;
+	color: var(--terra);
+	font-weight: 600;
+	cursor: pointer;
+	margin-left: 0.5rem;
+	font-size: 0.9375rem;
+}
+.toggleLink:hover {
+	text-decoration: underline;
+}
+
+.googleBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+	width: 100%;
+	padding: 0.875rem;
+	background: var(--white);
+	border: 1px solid var(--cream-darker);
+	border-radius: var(--radius-md);
+	font-size: 0.9375rem;
+	font-weight: 500;
+	color: var(--ink);
+	cursor: pointer;
+	transition: all 0.2s;
+	box-shadow: var(--shadow-sm);
+	font-family: var(--font-body);
+}
+
+.googleBtn:hover {
+	background: var(--cream);
+	border-color: var(--cream-dark);
+}
+.googleIcon {
+	width: 20px;
+	height: 20px;
+	flex-shrink: 0;
+}
+
+.divider {
+	display: flex;
+	align-items: center;
+	margin: 1.5rem 0;
+	color: var(--ink-faint);
+	font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: var(--cream-darker);
+}
+.divider span {
+	padding: 0 1rem;
+}
+
+.roleToggle {
+	display: flex;
+	background: var(--cream);
+	border-radius: var(--radius-md);
+	padding: 0.25rem;
+	margin-bottom: 1.25rem;
+}
+
+.roleBtn {
+	flex: 1;
+	padding: 0.625rem;
+	border-radius: var(--radius-sm);
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--ink-muted);
+	transition: all 0.2s;
+}
+.roleActive {
+	background: var(--white);
+	color: var(--forest);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.inputWrap {
+	position: relative;
+}
+.inputIcon {
+	position: absolute;
+	left: 1rem;
+	top: 50%;
+	transform: translateY(-50%);
+	color: var(--ink-faint);
+	pointer-events: none;
+}
+
+.authInput {
+	width: 100%;
+	min-height: 3.25rem;
+	padding-left: 3rem;
+	padding-right: 1rem;
+}
+
+.submitBtn {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+	.visualSide {
+		display: none;
+	}
+	.formSide {
+		padding: 3rem 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.page {
+		padding: 0;
+	}
+	.authContainer {
+		border-radius: 0;
+		min-height: 100vh;
+	}
+}

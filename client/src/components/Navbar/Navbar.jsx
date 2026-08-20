@@ -46,29 +46,31 @@ const Navbar = () => {
     >
       <div className="container">
         <div className={styles.inner}>
-          {/* Logo */}
-          <Link to="/" className={styles.logo}>
-            <div className={styles.logoIcon}>
-              <Briefcase size={18} />
-            </div>
-            <span className={styles.logoText}>
-              Nest<span className={styles.logoAccent}>work</span>
-            </span>
-          </Link>
+          <div className={styles.leftSection}>
+            {/* Logo */}
+            <Link to="/" className={styles.logo}>
+              <div className={styles.logoIcon}>
+                <Briefcase size={18} />
+              </div>
+              <span className={styles.logoText}>
+                Nest<span className={styles.logoAccent}>work</span>
+              </span>
+            </Link>
 
-          {/* Desktop Nav Links */}
-          <div className={styles.navLinks}>
-            <NavLink to="/jobs" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
-              Browse Jobs
-            </NavLink>
-            <NavLink to="/companies" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
-              Companies
-            </NavLink>
-            {user?.role === 'employer' && (
-              <NavLink to="/post-job" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
-                Post a Job
+            {/* Desktop Nav Links */}
+            <div className={styles.navLinks}>
+              <NavLink to="/jobs" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
+                Browse Jobs
               </NavLink>
-            )}
+              <NavLink to="/companies" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
+                Companies
+              </NavLink>
+              {user?.role === 'employer' && (
+                <NavLink to="/post-job" className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}>
+                  Post a Job
+                </NavLink>
+              )}
+            </div>
           </div>
 
           {/* Desktop Auth */}

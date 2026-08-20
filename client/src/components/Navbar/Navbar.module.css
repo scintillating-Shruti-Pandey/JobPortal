@@ -21,7 +21,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
 }
 
 /* Logo */
@@ -62,9 +67,6 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .navLink {

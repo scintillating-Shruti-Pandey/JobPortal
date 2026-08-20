@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Search, MapPin, ArrowRight, Users, Briefcase, TrendingUp, Building2, Star } from 'lucide-react';
+import { Search, MapPin, ArrowRight, ChevronRight, Users, Briefcase, TrendingUp, Building2, Star } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUpLib from 'react-countup';
 const CountUp = CountUpLib.default || CountUpLib;

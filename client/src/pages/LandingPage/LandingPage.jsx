@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Search, MapPin, Sparkles, ArrowRight, Users, Briefcase, TrendingUp, Building2, ChevronRight, Star } from 'lucide-react';
+import { Search, MapPin, ArrowRight, Users, Briefcase, TrendingUp, Building2, Star } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUpLib from 'react-countup';
 const CountUp = CountUpLib.default || CountUpLib;
@@ -94,7 +94,7 @@ const LandingPage = () => {
             transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
           >
             <div className={styles.heroEyebrow}>
-              <Sparkles size={14} />
+              <span className={styles.heroEyebrowDot} />
               <span>Thoughtfully curated opportunities</span>
             </div>
           </motion.div>

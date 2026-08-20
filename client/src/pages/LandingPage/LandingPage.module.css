@@ -58,17 +58,28 @@
 .heroEyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(45,80,22,0.12);
-  border-radius: 99px;
-  padding: 0.4rem 1.1rem;
+  gap: 0.625rem;
+  background: transparent;
+  border: none;
+  border-left: 3px solid var(--terra);
+  border-radius: 0;
+  padding: 0.25rem 0.875rem;
   font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--forest);
-  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: var(--ink-soft);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   margin-bottom: 1.75rem;
-  backdrop-filter: blur(8px);
+  font-family: var(--font-mono);
+}
+
+.heroEyebrowDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--terra);
+  flex-shrink: 0;
 }
 
 .heroTitle {

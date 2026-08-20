@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   z-index: var(--z-sticky);
-  padding: 1.25rem 0;
+  padding: 0.875rem 0;
   transition: all 0.35s var(--ease-smooth);
 }
 
@@ -13,7 +13,7 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(45, 80, 22, 0.08);
-  padding: 0.875rem 0;
+  padding: 0.625rem 0;
   box-shadow: 0 4px 24px rgba(45, 80, 22, 0.06);
 }
 

@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	background: var(--cream);
-	padding: 2rem;
+	padding: 6rem 2rem 2rem 2rem;
 }
 
 .authContainer {
@@ -242,8 +242,8 @@
 .authInput {
 	width: 100%;
 	min-height: 3.25rem;
-	padding-left: 3rem;
-	padding-right: 1rem;
+	padding-left: 3rem !important;
+	padding-right: 1rem !important;
 }
 
 .submitBtn {

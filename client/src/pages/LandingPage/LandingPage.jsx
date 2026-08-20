@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Search, MapPin, Sparkles, ArrowRight, ChevronRight, Users, Briefcase, TrendingUp, Building2, Star, Code2, Palette, Package, Brain, Megaphone, HeartPulse, Coins, ClipboardList } from 'lucide-react';
+import { Search, MapPin, Sparkles, ArrowRight, ChevronRight, Users, Briefcase, TrendingUp, Building2, Star, Code2, Palette, Package, Brain, Megaphone, HeartPulse, Coins, ClipboardList, UserPlus, Compass, Send, Rocket } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUpLib from 'react-countup';
 const CountUp = CountUpLib.default || CountUpLib;
@@ -304,10 +304,10 @@ const LandingPage = () => {
           </div>
           <div className={styles.stepsGrid}>
             {[
-              { step: '01', title: 'Create your profile', desc: 'Tell us who you are. Skills, experience, what you\'re looking for. Takes 3 minutes.', icon: '🌱' },
-              { step: '02', title: 'Explore & discover', desc: 'Browse curated opportunities. Filter by role, location, salary. No junk — promise.', icon: '🔍' },
-              { step: '03', title: 'Apply thoughtfully', desc: 'Send your application with a cover note. Quality over quantity, always.', icon: '✉️' },
-              { step: '04', title: 'Land your role', desc: 'Get shortlisted, interview, negotiate, and start something new.', icon: '🎉' },
+              { step: '01', title: 'Create your profile', desc: 'Tell us who you are. Skills, experience, what you\'re looking for. Takes 3 minutes.', Icon: UserPlus },
+              { step: '02', title: 'Explore & discover', desc: 'Browse curated opportunities. Filter by role, location, salary. No junk — promise.', Icon: Compass },
+              { step: '03', title: 'Apply thoughtfully', desc: 'Send your application with a cover note. Quality over quantity, always.', Icon: Send },
+              { step: '04', title: 'Land your role', desc: 'Get shortlisted, interview, negotiate, and start something new.', Icon: Rocket },
             ].map((s, i) => (
               <motion.div
                 key={s.step}
@@ -318,7 +318,7 @@ const LandingPage = () => {
                 transition={{ delay: i * 0.1, duration: 0.5 }}
               >
                 <div className={styles.stepNumber}>{s.step}</div>
-                <div className={styles.stepIcon}>{s.icon}</div>
+                <div className={styles.stepIcon}><s.Icon size={24} strokeWidth={1.5} /></div>
                 <h3 className={styles.stepTitle}>{s.title}</h3>
                 <p className={styles.stepDesc}>{s.desc}</p>
                 {i < 3 && <div className={styles.stepConnector} />}
@@ -419,7 +419,7 @@ const LandingPage = () => {
             </div>
           </div>
           <div className={styles.footerBottom}>
-            <p>© 2024 NestWork. Made with 🌿 in India.</p>
+            <p>© 2026 NestWork. Made with ❤️ by Shruti Pandey.</p>
           </div>
         </div>
       </footer>

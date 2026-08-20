@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Search, MapPin, Sparkles, ArrowRight, ChevronRight, Users, Briefcase, TrendingUp, Building2, Star } from 'lucide-react';
+import { Search, MapPin, Sparkles, ArrowRight, ChevronRight, Users, Briefcase, TrendingUp, Building2, Star, Code2, Palette, Package, Brain, Megaphone, HeartPulse, Coins, ClipboardList } from 'lucide-react';
 import { useInView } from 'react-intersection-observer';
 import CountUpLib from 'react-countup';
 const CountUp = CountUpLib.default || CountUpLib;
@@ -10,14 +10,14 @@ import JobCard from '../../components/JobCard/JobCard';
 import styles from './LandingPage.module.css';
 
 const CATEGORIES = [
-  { label: 'Engineering', icon: '⚙️', color: '#2D5016' },
-  { label: 'Design', icon: '🎨', color: '#C8734B' },
-  { label: 'Product', icon: '🚀', color: '#8FB86A' },
-  { label: 'Data & AI', icon: '🧠', color: '#5B7FA6' },
-  { label: 'Marketing', icon: '📣', color: '#B06A9A' },
-  { label: 'Healthcare', icon: '💚', color: '#3D9970' },
-  { label: 'Finance', icon: '💰', color: '#D4A017' },
-  { label: 'Operations', icon: '📋', color: '#7F8C8D' },
+  { label: 'Engineering', Icon: Code2,        color: '#2D5016' },
+  { label: 'Design',      Icon: Palette,       color: '#C8734B' },
+  { label: 'Product',     Icon: Package,       color: '#8FB86A' },
+  { label: 'Data & AI',   Icon: Brain,         color: '#5B7FA6' },
+  { label: 'Marketing',   Icon: Megaphone,     color: '#B06A9A' },
+  { label: 'Healthcare',  Icon: HeartPulse,    color: '#3D9970' },
+  { label: 'Finance',     Icon: Coins,         color: '#D4A017' },
+  { label: 'Operations',  Icon: ClipboardList, color: '#7F8C8D' },
 ];
 
 const TESTIMONIALS = [
@@ -256,7 +256,7 @@ const LandingPage = () => {
                 onClick={() => navigate(`/jobs?category=${cat.label}`)}
               >
                 <div className={styles.categoryIcon} style={{ background: `${cat.color}18`, color: cat.color }}>
-                  {cat.icon}
+                  <cat.Icon size={20} strokeWidth={1.75} />
                 </div>
                 <span className={styles.categoryLabel}>{cat.label}</span>
                 <ChevronRight size={14} className={styles.categoryArrow} />

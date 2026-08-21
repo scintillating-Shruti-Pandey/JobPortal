@@ -14,7 +14,13 @@ const getJobs = async (req, res) => {
     const query = { isActive: true };
 
     if (keyword) {
-      query.$text = { $search: keyword };
+      const kw = { $regex: keyword, $options: 'i' };
+      query.$or = [
+        { title: kw },
+        { 'company.name': kw },
+        { skills: kw },
+        { description: kw },
+      ];
     }
     if (location) query.location = { $regex: location, $options: 'i' };
     if (type) query.type = type;
